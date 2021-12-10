@@ -37,9 +37,9 @@ const areYouMyPal = new Audio('audio/winner.mp3');
 // clear screen 1 and set up screen 2
 
 // set single event listener for audio and style changes
-document.addEventListener('click', clearScreen1);
+document.addEventListener('click', clearScreenOne);
 
-function clearScreen1() {
+function clearScreenOne() {
     // start theme song
     musicWelcome();
     // delay in style changes so that they hit with timing of music downbeat
@@ -55,8 +55,8 @@ function musicWelcome() {
     document.removeEventListener('click', musicWelcome);
 }
 
-
-function screenTransitionOneTwo() {
+// style transition, hide, unhide elements
+function screenStyleTransitionOneTwo() {
     // hide welcome animations
     document.getElementById('welcome-gopher-1').style.display = 'none';
     document.getElementById('welcome-gopher-2').style.display = 'none';
@@ -76,7 +76,10 @@ function screenTransitionOneTwo() {
     document.getElementById('begin').style.display = 'block';
     // ??? not entirely sure what I was going here...
     // document.getElementById('begin').style.marginTop ='130px';    
+
+    // ??? would like to remove golf course image also...
 }
+
 
 
 
@@ -277,6 +280,17 @@ function selectDanny() {
 
 
 
+// listen for "play the game" click
+document.getElementById('begin').addEventListener('click', playKillGophers);
+
+// play "kill all the golfers/gophers" dialogue
+function playKillGophers() {
+    killGophers.play();
+    killGophers.volume = .8;
+}
+
+
+
 
 
 
@@ -285,6 +299,28 @@ function selectDanny() {
 
 
 ////////// screen 3 //////////
+
+
+
+
+
+
+
+
+const carlSpacklerPoints = {}
+
+const gopherPoints = {}
+
+
+
+function whackGopher () {}
+
+function whackGolfer () {}
+
+
+
+
+
 
 
 

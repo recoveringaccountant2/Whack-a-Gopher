@@ -1,0 +1,251 @@
+
+body {
+    background-image: url(/imgs/golfcourse.jpeg);
+    background-color: rgb(130, 151, 98);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 130px;
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 70px;
+    text-shadow: 2px 2px 0px yellow;
+}
+
+h4 {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px yellow;
+}
+
+h5 {
+    display: none;
+    padding-top: 130px;    
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px yellow;
+}
+
+
+
+
+#begin {
+    display: none;
+    padding-top: 30px;
+    font-family: 'Courgette', cursive;
+    color: red;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px yellow;
+    /* animation: fadeInAnimation ease 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;     */
+}
+
+/* .row {
+    display: inline-block;
+    text-align: center;
+
+    /* display: flex;
+    flex-wrap: nowrap; */
+    /* padding: 0 4px; */
+  /* } */ 
+  
+
+
+  /* Create two equal columns that sits next to each other */
+  .column {
+    /* flex: 24%;
+    padding: 0 4px; */
+
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+  }
+
+
+#character-options {
+    display: none;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    /* width: 100; */
+    /* font-family: 'Courgette', cursive;
+    color: red;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px yellow; */
+    /* animation: fadeInAnimation ease 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;     */
+
+
+}
+
+
+img {
+    border-radius: 20%;
+  }
+
+#welcome-gopher1 {
+    position: absolute;
+    bottom: -340px;
+    left: -100px;
+    z-index: 2;    
+    width: 600px;
+    height: 330px;
+    overflow: hidden;
+    animation: slide-in ease 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+#welcome-gopher2 {
+    position: absolute;
+    bottom: -340px;
+    right: 0px;
+    z-index: 2;    
+    width: 600px;
+    height: 330px;
+    overflow: hidden;
+    animation: slide-in ease 3s;
+    animation-delay: 2.5s;   
+    animation-iteration-count: infinite;
+}
+
+
+#welcome-gopher3 {
+    position: absolute;
+    bottom: -340px;
+    right: 250px;
+    z-index: 5;    
+    width: 600px;
+    height: 330px;
+    overflow: hidden;
+    animation: slide-in ease 3s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+#welcome-gopher4 {
+    position: absolute;
+    bottom: -340px;
+    left: 125px;
+    z-index: 6;    
+    width: 600px;
+    height: 330px;
+    overflow: hidden;
+    animation: slide-in ease 3s;
+    animation-delay: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+
+#welcome-danger {
+    position: absolute;
+    bottom: -340px;
+    right: 75px;
+    z-index: 7;    
+    width: 600px;
+    height: 330px;
+    overflow: hidden;
+    animation: slide-in ease 7s;
+    animation-delay: 8s;
+    animation-iteration-count: infinite;
+}
+
+#welcome-chevy {
+    position: absolute;
+    bottom: -340px;
+    left: -25px;
+    z-index: 7;    
+    width: 600px;
+    height: 330px;
+    overflow: hidden;
+    animation: slide-in ease 9s;
+    animation-delay: 15s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide-in {
+
+    0% {
+
+        transform: translateY(0px);
+      }
+      100% {
+
+        transform: translateY(-300px);
+      }
+
+
+
+
+    100% {left: 50; }
+    /* 100% {bottom: -10; } */
+}
+
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+
+
+
+
+
+
+
+
+html, body {
+    height: 100%;
+}
+
+span {
+    text-decoration: line-through;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
