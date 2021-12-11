@@ -74,17 +74,17 @@ function screenStyleTransitionOneTwo() {
     // display character text
     document.getElementById('character-title').style.display = 'block';
     // display character images
-    document.getElementById('character-grid').style.display = 'inline-grid';
+    document.getElementById('character-grid').style.display = 'grid';
+    // display enter your name text
+    document.getElementById('name-title').style.display = 'block';
+    // display name input field
+    document.getElementById('player-name').style.display = 'inline-block';   
     // display button
-    document.getElementById('begin').style.display = 'block';
-    // ??? not entirely sure what I was going here...
-    // document.getElementById('begin').style.marginTop ='130px';    
-
-    // ??? would like to remove golf course image also...
+    document.getElementById('begin').style.display = 'inline-block';   
+    // hide golf course background 
+    document.style.backgroundImage = 'none';
 }
-
-
-
+    
 
 
 
@@ -291,6 +291,7 @@ function playKillGophers() {
     killGophers.play();
     killGophers.volume = .8;
 }
+
 
 
 

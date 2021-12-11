@@ -25,20 +25,63 @@ h2 {
     text-shadow: 1px 1px 0px yellow;
 }
 
-h5 {
-    display: none;
-    padding-top: 130px;    
+#character-title {
+    display: none;  
     text-align: center;
-    font-family: 'Courgette', cursive;
-    color: red;
-    font-size: 35px;
-    text-shadow: 1px 1px 0px yellow;
 }
 
-#character-title {
+
+
+
+
+
+
+
+
+
+
+
+#enter-name {
+    text-align: center;
+}
+
+
+#name-title {
+    padding-top: 30px;
     display: none;  
 }
 
+#player-name {
+    display: none;
+}
+
+
+#begin {
+    display: none;  
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+#player-name, #enter-name-title {
+    display: none;
+    text-align: center;
+} */
+
+
+/* 
 #begin {
     display: none;
     padding-top: 30px;
@@ -47,14 +90,14 @@ h5 {
     text-align: center;
     font-size: 35px;
     text-shadow: 1px 1px 0px yellow;
-    /* animation: fadeInAnimation ease 2s;
-    animation-delay: 2s;
-    animation-iteration-count: 1;     */
-}
+} */
+
+
+
 
 .wrapper {
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
+    display: grid;
+    grid-auto-columns: 125px;
     grid-gap: 10px;
   }
   
@@ -117,19 +160,6 @@ h5 {
     display: none;
     text-align: center;
     padding-top: 30px;
-    max-width: 700px;
-    /* max-width: 700px; */
-    /* width: 100; */
-    /* font-family: 'Courgette', cursive;
-    color: red;
-    text-align: center;
-    font-size: 35px;
-    text-shadow: 1px 1px 0px yellow; */
-    /* animation: fadeInAnimation ease 2s;
-    animation-delay: 2s;
-    animation-iteration-count: 1;     */
-
-
 }
 
 
