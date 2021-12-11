@@ -17,7 +17,7 @@ h1 {
     text-shadow: 2px 2px 0px yellow;
 }
 
-h4 {
+h2 {
     text-align: center;
     font-family: 'Courgette', cursive;
     color: red;
@@ -35,8 +35,9 @@ h5 {
     text-shadow: 1px 1px 0px yellow;
 }
 
-
-
+#character-title {
+    display: none;  
+}
 
 #begin {
     display: none;
@@ -51,33 +52,73 @@ h5 {
     animation-iteration-count: 1;     */
 }
 
-/* .row {
-    display: inline-block;
-    text-align: center;
-
-    /* display: flex;
-    flex-wrap: nowrap; */
-    /* padding: 0 4px; */
-  /* } */ 
+.wrapper {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  }
   
+.box {
+    border-radius: 5px;
+    padding: 5px;
+}
 
-
-  /* Create two equal columns that sits next to each other */
-  .column {
-    /* flex: 24%;
-    padding: 0 4px; */
-
-    display: inline-block;
-    text-align: center;
-    margin: auto;
+.a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .c {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .d {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .e {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .f {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .g {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .h {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
 
-#character-options {
+#character-grid {
     display: none;
-    margin: auto;
     text-align: center;
     padding-top: 30px;
+    max-width: 700px;
+    /* max-width: 700px; */
     /* width: 100; */
     /* font-family: 'Courgette', cursive;
     color: red;
@@ -94,12 +135,13 @@ h5 {
 
 img {
     border-radius: 20%;
+    padding: 0px
   }
 
-#welcome-gopher1 {
+#welcome-gopher-1 {
     position: absolute;
     bottom: -340px;
-    left: -100px;
+    left: 50px;
     z-index: 2;    
     width: 600px;
     height: 330px;
@@ -109,10 +151,10 @@ img {
     animation-iteration-count: infinite;
 }
 
-#welcome-gopher2 {
+#welcome-gopher-2 {
     position: absolute;
     bottom: -340px;
-    right: 0px;
+    right: -100px;
     z-index: 2;    
     width: 600px;
     height: 330px;
@@ -123,10 +165,10 @@ img {
 }
 
 
-#welcome-gopher3 {
+#welcome-gopher-3 {
     position: absolute;
     bottom: -340px;
-    right: 250px;
+    right: 200px;
     z-index: 5;    
     width: 600px;
     height: 330px;
@@ -136,10 +178,10 @@ img {
     animation-iteration-count: infinite;
 }
 
-#welcome-gopher4 {
+#welcome-gopher-4 {
     position: absolute;
     bottom: -340px;
-    left: 125px;
+    left: 300px;
     z-index: 6;    
     width: 600px;
     height: 330px;
@@ -150,10 +192,10 @@ img {
 }
 
 
-#welcome-danger {
+#welcome-al {
     position: absolute;
     bottom: -340px;
-    right: 75px;
+    right: 150px;
     z-index: 7;    
     width: 600px;
     height: 330px;
@@ -163,16 +205,16 @@ img {
     animation-iteration-count: infinite;
 }
 
-#welcome-chevy {
+#welcome-ty {
     position: absolute;
     bottom: -340px;
-    left: -25px;
+    left: 150px;
     z-index: 7;    
     width: 600px;
     height: 330px;
     overflow: hidden;
     animation: slide-in ease 9s;
-    animation-delay: 15s;
+    animation-delay: 13s;
     animation-iteration-count: infinite;
 }
 
@@ -230,19 +272,6 @@ html, body {
 span {
     text-decoration: line-through;
 }
-
-.main {
-    height: 100%;
-    width: 100%;
-    display: table;
-}
-
-.wrapper {
-    display: table-cell;
-    height: 100%;
-    vertical-align: middle;
-}
-
 
 
 

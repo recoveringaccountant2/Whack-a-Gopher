@@ -43,7 +43,7 @@ function clearScreenOne() {
     // start theme song
     musicWelcome();
     // delay in style changes so that they hit with timing of music downbeat
-    setTimeout(function(){ screenTransitionOneTwo(); }, 800);
+    setTimeout(function(){ screenStyleTransitionOneTwo(); }, 800);
 };
 
 // play theme music
@@ -64,6 +64,9 @@ function screenStyleTransitionOneTwo() {
     document.getElementById('welcome-gopher-4').style.display = 'none';
     document.getElementById('welcome-al').style.display = 'none';
     document.getElementById('welcome-ty').style.display = 'none';
+    // document.getElementsById('welcome-images').style.display = 'none';
+
+
     // ^^^ assign a class to these welcome pics to clean up
     // hide welcome text fields
     document.getElementById('sub-title').style.display = 'none';
@@ -71,7 +74,7 @@ function screenStyleTransitionOneTwo() {
     // display character text
     document.getElementById('character-title').style.display = 'block';
     // display character images
-    document.getElementById('character-options').style.display = 'inline-block';
+    document.getElementById('character-grid').style.display = 'inline-grid';
     // display button
     document.getElementById('begin').style.display = 'block';
     // ??? not entirely sure what I was going here...
@@ -119,7 +122,7 @@ function selectTy() {
     document.getElementById('danny').style.border = '0px solid white';
 
     // add frame to selected character for visual confirmation of selection
-    document.getElementById('ty').style.border = '5px solid white';
+    document.getElementById('ty').style.border = '2px solid white';
 
     // cue audio file for character
     likeYouBetty.play();
@@ -143,7 +146,7 @@ function selectLacey() {
     document.getElementById('mrssmails').style.border = '0px solid white';
     document.getElementById('danny').style.border = '0px solid white';
 
-    document.getElementById('lacey').style.border = '5px solid white';
+    document.getElementById('lacey').style.border = '2px solid white';
 
     nanaShort.play();
     nanaShort.volume = .8;    
@@ -164,7 +167,7 @@ function selectMaggie() {
     document.getElementById('mrssmails').style.border = '0px solid white';
     document.getElementById('danny').style.border = '0px solid white';
 
-    document.getElementById('maggie').style.border = '5px solid white';
+    document.getElementById('maggie').style.border = '2px solid white';
 
     thanksForNothing.play();
     thanksForNothing.volume = .8;
@@ -185,7 +188,7 @@ function selectAl() {
     document.getElementById('mrssmails').style.border = '0px solid white';
     document.getElementById('danny').style.border = '0px solid white';
 
-    document.getElementById('al').style.border = '5px solid white';
+    document.getElementById('al').style.border = '2px solid white';
 
     hat.play();
     hat.volume = .8;
@@ -206,7 +209,7 @@ function selectJudge() {
     document.getElementById('mrssmails').style.border = '0px solid white';
     document.getElementById('danny').style.border = '0px solid white';
 
-    document.getElementById('judge').style.border = '5px solid white';
+    document.getElementById('judge').style.border = '2px solid white';
 
     areYouMyPal.play();
     areYouMyPal.volume = .8;
@@ -227,7 +230,7 @@ function selectCarl() {
     document.getElementById('mrssmails').style.border = '0px solid white';
     document.getElementById('danny').style.border = '0px solid white';
 
-    document.getElementById('carl').style.border = '5px solid white';
+    document.getElementById('carl').style.border = '2px solid white';
 
     gungaShort.play();
     gungaShort.volume = .8;
@@ -248,7 +251,7 @@ function selectMrsSmails() {
     document.getElementById('mrssmails').style.border = '0px solid white';
     document.getElementById('danny').style.border = '0px solid white';
 
-    document.getElementById('mrssmails').style.border = '5px solid white';
+    document.getElementById('mrssmails').style.border = '2px solid white';
 
     thankYouVeryLittle.play();
     thankYouVeryLittle.volume = .8;
@@ -269,7 +272,7 @@ function selectDanny() {
     document.getElementById('mrssmails').style.border = '0px solid white';
     document.getElementById('danny').style.border = '0px solid white';
 
-    document.getElementById('danny').style.border = '5px solid white';
+    document.getElementById('danny').style.border = '2px solid white';
 
     beTheBall.play();
     beTheBall.volume = .8;
