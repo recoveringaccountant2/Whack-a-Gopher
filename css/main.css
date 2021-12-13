@@ -305,16 +305,84 @@ img {
 
 
 
-
+/* 
 #screen-3 {
 
 
-    /* display: none;  */
+    display: none; 
+
+}
+ */
+
+
+
+
+
+
+.game-screen {
+    display: none;
+    padding-top: 50px;
+    /* display: grid; */
+
+
+
+    grid-gap: 10px;
+}
+
+
+ #player-box {
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3; 
+}
+
+
+#player-box img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#game-box {
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; 
 
 }
 
 
 
+
+#gopher-box {
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; 
+}
+
+#gopher-box img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+#time-remaining-bar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; 
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
@@ -327,31 +395,8 @@ img {
     grid-auto-rows: auto; */
     /* grid-auto-columns: 125px; */
     grid-gap: 10px;
-  } */
+  } 
 
-#player-box {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 6;
-}
-
-
-#gopher-box {
-    grid-column-start: 6;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 6;
-}
-
-
-
-#time-remaining-bar {
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
 
 
 #r1c1 {

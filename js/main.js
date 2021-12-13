@@ -298,12 +298,12 @@ function screenStyleTransitionTwoThree() {
 
 
 
-    document.getElementById('player-picture').style.display = 'inline-block';
+    document.getElementById('player-picture').style.display = 'block';
     document.getElementById('player-box').style.display = 'grid';
 
 
 
-    document.getElementById('gopher-picture').style.display = 'inline-block';
+    document.getElementById('gopher-picture').style.display = 'block';
     document.getElementById('gopher-box').style.display = 'grid';
 
 
