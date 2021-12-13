@@ -278,15 +278,69 @@ function initializeGame() {
     // play "kill all the golfers/gophers" dialogue
     killGophers.play();
     killGophers.volume = .8;
-    // hide all screen 2 elements
-    document.getElementById('screen-2').style.display = 'none';   
     // set player name variable
     playerName = document.querySelector('input').value;
+    // style transition page 2 --> page 3
+    screenStyleTransitionTwoThree()
+
 }
+
+// style transition, hide, unhide elements
+function screenStyleTransitionTwoThree() {
+    // hide all screen 2 elements
+    document.getElementById('screen-2').style.display = 'none';   
+
+
+    document.getElementById('screen-3').style.display = 'grid';   
+
+
+
+
+
+    document.getElementById('player-picture').style.display = 'block';
+    document.getElementById('player-box').style.display = 'block';
+
+
+
+    document.getElementById('gopher-picture').style.display = 'inline';
+    document.getElementById('gopher-box').style.display = 'inline';
+
+
+
+    // display player score box
+    // document.getElementById('player-box').style.display = 'block';
+    // // display gopher score box
+    // document.getElementById('gopher-box').style.display = 'block';
+    // // display game field
+    // document.getElementById('game-box').style.display = 'grid';
+    // // display time remaining bar
+    // document.getElementById('time-remaining-bar').style.display = 'inline';   
+    // // display game controls
+    // document.getElementById('game-controls').style.display = 'inline';   
+
+}
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
 ////////// screen 3 //////////
+
+
+
+
+
+
+
 
 
 
@@ -298,15 +352,15 @@ function initializeGame() {
 ///// timer example
 
 
-let timeRemaining = 60;
+// let timeRemaining = 60;
 
-let countdownTimer = setInterval(function() {
-    if(timeRemaining <= 0) {
-        clearInterval(countdownTimer);
-    }
-    document.getElementById("timer-display").value = 60 - timeRemaining;
-    timeRemaining -= 1;
-}, 1000);
+// let countdownTimer = setInterval(function() {
+//     if(timeRemaining <= 0) {
+//         clearInterval(countdownTimer);
+//     }
+//     document.getElementById("timer-display").value = 60 - timeRemaining;
+//     timeRemaining -= 1;
+// }, 1000);
 
 
 
