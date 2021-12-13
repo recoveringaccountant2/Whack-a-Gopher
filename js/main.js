@@ -57,20 +57,8 @@ function musicWelcome() {
 
 // style transition, hide, unhide elements
 function screenStyleTransitionOneTwo() {
-    // hide welcome animations
-    document.getElementById('welcome-gopher-1').style.display = 'none';
-    document.getElementById('welcome-gopher-2').style.display = 'none';
-    document.getElementById('welcome-gopher-3').style.display = 'none';
-    document.getElementById('welcome-gopher-4').style.display = 'none';
-    document.getElementById('welcome-al').style.display = 'none';
-    document.getElementById('welcome-ty').style.display = 'none';
-    // document.getElementsById('welcome-images').style.display = 'none';
-
-
-    // ^^^ assign a class to these welcome pics to clean up
-    // hide welcome text fields
-    document.getElementById('sub-title').style.display = 'none';
-    document.getElementById('game-title').style.display = 'none';
+    // hide all welcome screen elements
+    document.getElementById('screen-1').style.display = 'none';
     // display character text
     document.getElementById('character-title').style.display = 'block';
     // display character images
@@ -82,7 +70,7 @@ function screenStyleTransitionOneTwo() {
     // display button
     document.getElementById('begin').style.display = 'inline-block';   
     // hide golf course background 
-    document.style.backgroundImage = 'none';
+    document.getElementById('body').style.backgroundImage = 'none';
 }
     
 
@@ -280,29 +268,56 @@ function selectDanny() {
     characterSelected = 7;
 }
 
-
-
+// initialize player name variable
+let playerName = null;
 
 // listen for "play the game" click
-document.getElementById('begin').addEventListener('click', playKillGophers);
+document.getElementById('begin').addEventListener('click', initializeGame);
 
-// play "kill all the golfers/gophers" dialogue
-function playKillGophers() {
+function initializeGame() {
+    // play "kill all the golfers/gophers" dialogue
     killGophers.play();
     killGophers.volume = .8;
+    // hide all screen 2 elements
+    document.getElementById('screen-2').style.display = 'none';   
+    // set player name variable
+    playerName = document.querySelector('input').value;
 }
 
 
 
-
-
-
-
-
-
-
-
 ////////// screen 3 //////////
+
+
+
+// countdown timer
+
+
+
+
+///// timer example
+
+
+let timeRemaining = 60;
+
+let countdownTimer = setInterval(function() {
+    if(timeRemaining <= 0) {
+        clearInterval(countdownTimer);
+    }
+    document.getElementById("timer-display").value = 60 - timeRemaining;
+    timeRemaining -= 1;
+}, 1000);
+
+
+
+
+
+
+
+
+
+///// timer example end
+
 
 
 
@@ -344,7 +359,7 @@ function whackGolfer () {}
 
 
 
-
+// AIzaSyDZNLE5R2CMhwU5r-EC6-_c5bGekLdJlW4
 
 
 
