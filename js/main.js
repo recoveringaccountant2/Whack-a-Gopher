@@ -136,8 +136,8 @@ function selectLacey() {
 
     document.getElementById('lacey').style.border = '2px solid white';
 
-    nanaShort.play();
-    nanaShort.volume = .8;    
+    freezeGopher.play();
+    freezeGopher.volume = .8;    
 
     characterSelected = 1;
 }
@@ -291,19 +291,20 @@ function screenStyleTransitionTwoThree() {
     document.getElementById('screen-2').style.display = 'none';   
 
 
+
+
+
     document.getElementById('screen-3').style.display = 'grid';   
 
 
 
-
-
-    document.getElementById('player-picture').style.display = 'block';
-    document.getElementById('player-box').style.display = 'block';
+    document.getElementById('player-picture').style.display = 'inline-block';
+    document.getElementById('player-box').style.display = 'grid';
 
 
 
-    document.getElementById('gopher-picture').style.display = 'inline';
-    document.getElementById('gopher-box').style.display = 'inline';
+    document.getElementById('gopher-picture').style.display = 'inline-block';
+    document.getElementById('gopher-box').style.display = 'grid';
 
 
 
