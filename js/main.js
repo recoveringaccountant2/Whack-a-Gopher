@@ -340,9 +340,25 @@ document.getElementById('game-box').style.cursor = 'imgs/hammercursor.png';
 
 ////////// screen 3 //////////
 
+// example
 
+const holes = document.querySelectorAll(".hole");
+  const length = holes.length;
 
+  var interval = setInterval(() => {
+    //Generate a random number
+    const random = Math.floor(Math.random() * length);
+    
+    //Remove the active class from every ground
+    holes.forEach((e) => {
+      e.classList.remove("active");
+    });
+    
+    //Add the active class to random ground
+    holes[random].classList.add("active");
+  }, 700);
 
+// ^ example
 
 
 

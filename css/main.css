@@ -331,7 +331,7 @@ img {
 
 
  #player-box {
-    
+
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -539,5 +539,47 @@ img {
     grid-row-start: 5;
     grid-row-end: 6;
 } 
+
+
+
+
+.hole .start-button .gopher {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hole {
+    background-image: url(/imgs/gopher-hole-150.png);
+    z-index: 1;
+    background-position: center 100%;
+}
+
+.start-button {
+    background-image: url(/imgs/start.png);
+    transition: all 0.2s ease;
+    top: 100%;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.gopher {
+    background-image: url(/imgs/gopheranimated.gif);
+    transition: all 0.1s ease;
+    top: 100%;
+    background-position: bottom;
+    background-size: 73%;
+}
+
+
+.hole.active .start-button {
+    top: 0;
+
+} 
+
+
 
 
