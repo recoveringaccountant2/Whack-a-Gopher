@@ -319,13 +319,17 @@ function screenStyleTransitionTwoThree() {
     // // display game controls
     // document.getElementById('game-controls').style.display = 'inline';   
 
+
+    document.getElementById('game-box').addEventListener('hover', hammerCursor);
+
 }
-    
 
 
 
 
-
+function hammerCursor (){
+document.getElementById('game-box').style.cursor = 'imgs/hammercursor.png';
+}
 
 
 

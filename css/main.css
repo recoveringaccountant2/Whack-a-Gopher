@@ -350,8 +350,8 @@ img {
 
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2; 
+    grid-row-start: 2;
+    grid-row-end: 3; 
 
 }
 
@@ -374,14 +374,31 @@ img {
 
 
 
+#game-controls {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+
+}
+
+
+
+
 
 #time-remaining-bar {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3; 
+    grid-row-start: 3;
+    grid-row-end: 4; 
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 
