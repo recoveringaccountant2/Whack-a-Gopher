@@ -373,7 +373,7 @@ img {
     text-align: center;
 }
 
-#time-remaining-bar {
+#time-remaining-box {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;

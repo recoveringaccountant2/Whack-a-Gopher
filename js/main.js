@@ -120,8 +120,8 @@ function clearCharacterSelection() {
     // turn off and reset any previous audio (except theme song)
     likeYouBetty.pause();
     likeYouBetty.currentTime = 0;
-    freezeGopher.pause();
-    freezeGopher.currentTime = 0;
+    youTakeDrugsDanny.pause();
+    youTakeDrugsDanny.currentTime = 0;
     thanksForNothing.pause();
     thanksForNothing.currentTime = 0;
     hat.pause();
@@ -146,6 +146,17 @@ function clearCharacterSelection() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 // event listener for Ty
 document.getElementById('ty').addEventListener('click', selectTy);
 
@@ -167,8 +178,8 @@ document.getElementById('lacey').addEventListener('click', selectLacey);
 function selectLacey() {
     clearCharacterSelection();
     document.getElementById('lacey').style.border = '2px solid white';
-    freezeGopher.play();
-    freezeGopher.volume = .8;    
+    youTakeDrugsDanny.play();
+    youTakeDrugsDanny.volume = .8;    
     characterSelected = 1;
 }
 
@@ -239,22 +250,35 @@ function selectDanny() {
 }
 
 // initialize player name variable
-let playerName = null;
+let playerName = "";
 
 // listen for "play the game" click
 document.getElementById('begin').addEventListener('click', initializeGame);
 
 function initializeGame() {
-    // play "kill all the golfers/gophers" dialogue
-    killGophers.play();
-    killGophers.volume = .8;
-    // set value of player name variable
-    playerName = document.querySelector('input').value;
-    // player name to title on game screen
-    document.getElementById('player-name-scoreboard').innerText = playerName;
-    // style transition page 2 --> page 3
-    screenStyleTransitionTwoThree()
-
+    if(characterSelected === null) {
+        // alert noise
+        nanaShort.play();
+        nanaShort.volume = 1;
+        // error message if no character selected
+        alert("Must select a character to continue!");
+    } else if(document.querySelector('input').value === "") {
+        // alert noise
+        nanaShort.play();
+        nanaShort.volume = 1;
+        // error message if name left blank
+        alert("Must enter player name to continue!");
+    } else { 
+        // play "kill all the golfers/gophers" dialogue
+        killGophers.play();
+        killGophers.volume = .8;
+        // set value of player name variable
+        playerName = document.querySelector('input').value;
+        // player name to title on game screen
+        document.getElementById('player-name-scoreboard').innerText = playerName;
+        // style transition page 2 --> page 3
+        screenStyleTransitionTwoThree()
+    }
 }
 
 // style transition, hide, unhide elements
@@ -331,11 +355,11 @@ document.getElementById('game-box').style.cursor = 'imgs/hammercursor.png';
 let playerScore = 0;
 let gopherScore = 0;
 let gameDifficulty = 1;
-const gameActive = false;
-const gameConcluded = false;
-const timeRemaining = 60;
+let gameActive = false;
+let gameConcluded = false;
+// let timeRemaining = 60;
 
-const results = [];
+let results = [];
 
 // previously defined:
 // let playerName
@@ -343,7 +367,6 @@ const results = [];
 
 
 
-// ?? it would be cool to have an aviation click knob like on a 1073
 
 
 const holesEl = document.querySelectorAll('.hole');
@@ -382,29 +405,117 @@ function updateDifficulty (){
 
 // get gopher to display
 
+// .....
+
+
+
+
 
 
 
 // begin game
 function start (){
+    // zero out scores
+    playerScore = 0;
+    gopherScore = 0;
+    // reset game (for replays)
+    gameConcluded = false;
+
+    // stop kill gophers audio
+    killGophers.pause();
+
+    // turn up background music (on delay)
+    setTimeout(function(){ 
+        welcome.volume = 0.8;
+    }, 2000);
+
+    // play freeze gopher
+    freezeGopher.play();
+    freezeGopher.volume = .8;
+
+    // small delay before game actually begins
+    setTimeout(function(){ 
+        gameActive = true;
+        timeRemaining = 60;
+        startTimer()
+    }, 2500);
+}
+
+
+// example
+
+let timer;
+let timeRemaining = 60;
+
+function startTimer() {
+    timer = window.setTimeout(countDown(), 1000 );
+    window.status = timeRemaining;
+}
+
+function countDown() {
+    timeRemaining = timeRemaining - 1;
+    window.status = timeRemaining;
+    if (timeRemaining <= 0) {
+         window.clearTimeout(timer);
+         timeRemaining = 0;
+         gameConcluded = true;
+    } else {
+        timer = window.setTimeout(countDown(), 1000);
+        document.getElementById('time-remaining-value').innerText = timeRemaining;
+    }
+}
+
+// end example
 
 
 
 
-    // let playerScore = 0;
-    // let gopherScore = 0;
+
+
+
+
+
+// function startTimer () {
+
+//     while (timeRemaining <= 0) {
+//         setInterval(function() {
+
+//         })
+//     }
+// }
+
+
+
+// let timer = setInterval(function() {
+//     if (timeRemaining <= 0) {
+//         // stop timer when get to zero
+//         clearInterval(timer);
+//         // stop game
+//         gameActive = false;
+//         gameConcluded = true;
+//         // push results
+//         // ...................
+//     }
+//     document.getElementById('time-remaining-value').value = 60 - timeRemaining;
+//     timeRemaining -= 1;
+// }, 1000);
+
+
+
     // let gameDifficulty = 1;
     // const gameActive = false;
     // const gameConcluded = false;
     // const timeRemaining = 60;
 
+// let timeRemaining = 60;
 
-
-
-
-
-}
-
+// let countdownTimer = setInterval(function() {
+//     if(timeRemaining <= 0) {
+//         clearInterval(countdownTimer);
+//     }
+//     document.getElementById('time-remaining-bar').value = 60 - timeRemaining;
+//     timeRemaining -= 1;
+// }, 1000);
 
 
 
@@ -436,8 +547,9 @@ function golferHit (){
     // point penalty
     playerScore = playerScore - 10
 
-    //should find an audio file to add also...
-    // ..........
+    // sound for golfer hit
+    nanaShort.play();
+    nanaShort.volume = 1;
 
     // update scoreboard
     document.getElementById('player-score').innerText = playerScore; 
@@ -475,35 +587,6 @@ function golferHit (){
 
 
 
-
-
-// countdown timer
-
-
-
-
-///// timer example
-
-
-// let timeRemaining = 60;
-
-// let countdownTimer = setInterval(function() {
-//     if(timeRemaining <= 0) {
-//         clearInterval(countdownTimer);
-//     }
-//     document.getElementById("timer-display").value = 60 - timeRemaining;
-//     timeRemaining -= 1;
-// }, 1000);
-
-
-
-
-
-
-
-
-
-///// timer example end
 
 
 
