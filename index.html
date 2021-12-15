@@ -60,35 +60,35 @@
 
         <div class="wrappper-character-select" id="character-grid">
 
-            <div class="box a" id="ty">
+            <div class="box a" id="ty" class="character">
                 <img src="imgs/ty2.jpeg" alt="Ty Webb" width="125" height="125">
             </div>
 
-            <div class="box b" id="lacey">
+            <div class="box b" id="lacey" class="character">
                 <img src="imgs/lacey.png" alt="Lacey Underall" width="125" height="125">
             </div>
 
-            <div class="box c" id="maggie">
+            <div class="box c" id="maggie" class="character">
                 <img src="imgs/maggie.jpeg" alt="Maggie O'Hooligan" width="125" height="125">
             </div>
 
-            <div class="box d" id="al">
+            <div class="box d" id="al" class="character">
                 <img src="imgs/danger2.jpeg" alt="Al Czervik" width="125" height="125">
             </div>
 
-            <div class="box e" id="judge">
+            <div class="box e" id="judge" class="character">
                 <img src="imgs/judge.png" alt="Judge Elihu Smails" width="125" height="125">
             </div>
 
-            <div class="box f" id="carl">
+            <div class="box f" id="carl" class="character">
                 <img src="imgs/carl2.png" alt="Carl Spackler" width="125" height="125">
             </div>
 
-            <div class="box g" id="mrssmails">
+            <div class="box g" id="mrssmails" class="character">
                 <img src="imgs/mrssmails.jpeg" alt="Mrs. Smails" width="125" height="125">
             </div>
 
-            <div class="box h" id="danny">
+            <div class="box h" id="danny" class="character">
                 <img src="imgs/danny.jpeg" alt="Danny Noonan" width="125" height="125">
             </div>
             
@@ -110,9 +110,15 @@
 
     <div class="game-screen" id="screen-3">
 
+
+
+
+
         <div id="player-box">
             
-            <h2 id="player-name-scoreboard">Charles Johnston</h2>          
+            <h2 id="player-name-scoreboard"></h2>          
+
+            <h5 id="player-name-scoreboard-as"></h5>       
 
             <img id="player-picture" src="imgs/carl-camo.png" width="150" height="150">
 
@@ -129,6 +135,8 @@
 
             <h2 id="gopher-name-scoreboard">Gopher</h2>            
 
+            <h5 id="gopher-name-scoreboard-as">Himself</h5>                      
+
             <img id="gopher-picture" src="imgs/gopheranimated.gif" width="150" height="150">
 
             <h2 id="gopher-score">0</h2>
@@ -142,15 +150,17 @@
 
         <div id="game-controls">
 
-            <h2 id=difficulty>select difficulty</h2>
+            <h4 id=difficulty>select difficulty</h4>
 
             <div class=difficulty-slider>
 
                 <div class="range">
 
-                    <input type="range" min="1" max="5" steps="1" value="1">
+                    <input id="difficulty-input" type="range" min="0" max="4" steps="1" value="0">
 
                 </div>
+
+            <h5 id=difficulty-selected>beginner</h5>
 
             </div>
 
@@ -163,19 +173,18 @@
 
             <progress value="0" max="60"></progress>
   
-            <h2 id="time-remaining-text">time remaining</h2>
+            <h4 id="time-remaining-text">time remaining</h4>
 
         </div>
 
+
+
+
         <div class="wrapper-field-grid" id="game-box">
 
-            <div id="r1c1">
-            
-                <div class="hole"></div>
+            <div id="r1c1" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -219,13 +228,9 @@
 
             </div>
 
-            <div id="r1c2">
-            
-                <div class="hole"></div>
+            <div id="r1c2" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
             
                 <div class="gopher">
                     
@@ -269,13 +274,9 @@
 
             </div>
 
-            <div id="r1c3">
-            
-                <div class="hole"></div>
+            <div id="r1c3" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -319,13 +320,9 @@
 
             </div>
 
-            <div id="r1c4">    
-            
-                <div class="hole"></div>
+            <div id="r1c4" class="hole">    
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -369,13 +366,9 @@
 
             </div>
 
-            <div id="r2c1">
-            
-                <div class="hole"></div>
+            <div id="r2c1" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -419,13 +412,9 @@
 
             </div>
 
-            <div id="r2c2">         
-            
-                <div class="hole"></div>
+            <div id="r2c2" class="hole">         
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -469,13 +458,9 @@
 
             </div>
 
-            <div id="r2c3">
-            
-                <div class="hole"></div>
+            <div id="r2c3" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -519,13 +504,9 @@
 
             </div>
 
-            <div id="r2c4">
-            
-                <div class="hole"></div>
+            <div id="r2c4" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
                 
                 <div class="gopher">
                     
@@ -569,13 +550,9 @@
 
             </div>
 
-            <div id="r3c1">
-            
-                <div class="hole"></div>
+            <div id="r3c1" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -619,13 +596,9 @@
 
             </div>
 
-            <div id="r3c2">
-            
-                <div class="hole"></div>
+            <div id="r3c2" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -669,13 +642,9 @@
 
             </div>
 
-            <div id="r3c3">
-            
-                <div class="hole"></div>
+            <div id="r3c3" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
                 
                 <div class="gopher">
                     
@@ -719,13 +688,9 @@
 
             </div>
 
-            <div id="r3c4">
-            
-                <div class="hole"></div>
+            <div id="r3c4" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>         
+                <img src="imgs/gopher-hole-150.png" width="125" height="125"> 
                 
                 <div class="gopher">
                     
@@ -769,13 +734,9 @@
 
             </div>
 
-            <div id="r4c1">
-                            
-                <div class="hole"></div>
+            <div id="r4c1" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -819,13 +780,9 @@
 
             </div>
 
-            <div id="r4c2">
-            
-                <div class="hole"></div>
+            <div id="r4c2" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
                 
                 <div class="gopher">
                     
@@ -869,13 +826,9 @@
 
             </div>
 
-            <div id="r4c3">
-                                   
-                <div class="hole"></div>
+            <div id="r4c3" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
 
                 <div class="gopher">
                     
@@ -919,13 +872,10 @@
 
             </div>
 
-            <div id="r4c4">
-            
-                <div class="hole"></div>
+            <div id="r4c4" class="hole">
 
                 <img src="imgs/gopher-hole-150.png" width="125" height="125">
-            
-                </div>
+        
 
                 <div class="gopher">
                     
