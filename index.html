@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whack-a-Gopher!</title>
     <script defer src="js/main.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,7 +109,7 @@
 
         </div>
 
-    <div class="game-screen" id="screen-3">
+    <div id="screen-3">
 
 
 
@@ -120,7 +121,7 @@
 
             <h5 id="player-name-scoreboard-as"></h5>       
 
-            <img id="player-picture" src="imgs/carl-camo.png" width="150" height="150">
+            <img id="player-picture" src="" width="150" height="150">
 
             <h2 id="player-score">0</h2>
 
@@ -175,53 +176,21 @@
 
             <h4 id="time-remaining-value">60</h4>
 
+            <button id="start-game">Start game!</button>
+
         </div>
 
 
 
 
-        <div class="wrapper-field-grid" id="game-box">
+        <div id="game-box">
 
             <div id="r1c1" class="hole">
-
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
 
                 <div class="gopher">
                     
                 </div>
                             
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-            
                 <div class="start-button">
 
                 </div>
@@ -229,45 +198,11 @@
             </div>
 
             <div id="r1c2" class="hole">
-
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
             
                 <div class="gopher">
                     
                 </div>
                             
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-
                 <div class="start-button">
 
                 </div>
@@ -276,44 +211,10 @@
 
             <div id="r1c3" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
 
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                       
                 <div class="start-button">
 
                 </div>
@@ -322,44 +223,10 @@
 
             <div id="r1c4" class="hole">    
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                     
+                                                 
                 <div class="start-button">
 
                 </div>
@@ -368,44 +235,10 @@
 
             <div id="r2c1" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
 
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                      
                 <div class="start-button">
 
                 </div>
@@ -414,44 +247,10 @@
 
             <div id="r2c2" class="hole">         
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                       
+                                                   
                 <div class="start-button">
 
                 </div>
@@ -460,42 +259,8 @@
 
             <div id="r2c3" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
-                </div>
-                            
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
                 </div>
                     
                 <div class="start-button">
@@ -505,45 +270,11 @@
             </div>
 
             <div id="r2c4" class="hole">
-
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
                 
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                      
+                                                  
                 <div class="start-button">
 
                 </div>
@@ -552,44 +283,10 @@
 
             <div id="r3c1" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                          
+                                                      
                 <div class="start-button">
 
                 </div>
@@ -598,44 +295,10 @@
 
             <div id="r3c2" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                     
+                                                 
                 <div class="start-button">
 
                 </div>
@@ -643,43 +306,9 @@
             </div>
 
             <div id="r3c3" class="hole">
-
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
                 
                 <div class="gopher">
                     
-                </div>
-                            
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
                 </div>
                       
                 <div class="start-button">
@@ -689,45 +318,11 @@
             </div>
 
             <div id="r3c4" class="hole">
-
-                <img src="imgs/gopher-hole-150.png" width="125" height="125"> 
                 
                 <div class="gopher">
                     
                 </div>
                             
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-
                 <div class="start-button">
 
                 </div>
@@ -736,44 +331,10 @@
 
             <div id="r4c1" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
 
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                         
                 <div class="start-button">
 
                 </div>
@@ -781,45 +342,11 @@
             </div>
 
             <div id="r4c2" class="hole">
-
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
                 
                 <div class="gopher">
                     
                 </div>
-                            
-                <div class="golfer-ty">
 
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                      
                 <div class="start-button">
 
                 </div>
@@ -828,91 +355,22 @@
 
             <div id="r4c3" class="hole">
 
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-
                 <div class="gopher">
                     
                 </div>
                             
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                       
                 <div class="start-button">
 
                 </div>
 
             </div>
 
-            <div id="r4c4" class="hole">
-
-                <img src="imgs/gopher-hole-150.png" width="125" height="125">
-        
+            <div id="r4c4" class="hole">        
 
                 <div class="gopher">
                     
                 </div>
                             
-                <div class="golfer-ty">
-
-                </div>
-
-                <div class="golfer-lacey">
-
-                </div>
-
-                <div class="golfer-maggie">
-
-                </div>
-
-                <div class="golfer-al">
-
-                </div>
-
-                <div class="golfer-judge">
-
-                </div>
-
-                <div class="golfer-carl">
-
-                </div>
-
-                <div class="golfer-mrssmails">
-
-                </div>
-
-                <div class="golfer-danny">
-
-                </div>
-                        
                 <div class="start-button">
 
                 </div>
@@ -926,3 +384,50 @@
 </body>
 
 </html>
+
+
+
+
+<!-- 
+
+<div class="gopher">
+                    
+</div>
+            
+<div class="golfer-ty">
+
+</div>
+
+<div class="golfer-lacey">
+
+</div>
+
+<div class="golfer-maggie">
+
+</div>
+
+<div class="golfer-al">
+
+</div>
+
+<div class="golfer-judge">
+
+</div>
+
+<div class="golfer-carl">
+
+</div>
+
+<div class="golfer-mrssmails">
+
+</div>
+
+<div class="golfer-danny">
+
+</div>
+        
+<div class="start-button">
+
+</div>
+ -->
+

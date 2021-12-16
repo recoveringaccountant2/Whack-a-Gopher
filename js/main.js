@@ -28,6 +28,7 @@ const waiting = new Audio('audio/waiting.mp3');
 const auRevoirGopher = new Audio('audio/au revoir gopher.mp3');
 const thanksForNothing = new Audio('audio/thanks-for-nothing.mp3');
 const areYouMyPal = new Audio('audio/winner.mp3');
+const punch = new Audio('audio/PUNCH.mp3');
 // template to add more audio
 // const  = new Audio('audio/');
 
@@ -354,12 +355,12 @@ document.getElementById('game-box').style.cursor = 'imgs/hammercursor.png';
 // define game board variables 
 let playerScore = 0;
 let gopherScore = 0;
-let gameDifficulty = 1;
+let gameDifficulty = 0;
 let gameActive = false;
 let gameConcluded = false;
-// let timeRemaining = 60;
+let timeRemaining = 60;
 
-let results = [];
+// let results = [];
 
 // previously defined:
 // let playerName
@@ -368,12 +369,6 @@ let results = [];
 
 
 
-
-const holesEl = document.querySelectorAll('.hole');
-
-const gophersEl = document.querySelectorAll('.gopher');
-
-const playerNameEl = document.getElementById('player-name-scoreboard');
 
 
 // display player name on game screen
@@ -410,14 +405,16 @@ function updateDifficulty (){
 
 
 
-
-
+// event listener to begin game
+document.getElementById('start-game').addEventListener('click', start)
 
 // begin game
 function start (){
     // zero out scores
     playerScore = 0;
+    document.getElementById('player-score').innerText = playerScore; 
     gopherScore = 0;
+    document.getElementById('gopher-score').innerText = gopherScore; 
     // reset game (for replays)
     gameConcluded = false;
 
@@ -442,115 +439,54 @@ function start (){
 }
 
 
-// example
 
+
+
+// timer functionality
 let timer;
-let timeRemaining = 60;
 
 function startTimer() {
-    timer = window.setTimeout(countDown(), 1000 );
-    window.status = timeRemaining;
+    // process recuction every 1000ms
+    timer = setInterval(reduceTime, 1000);
 }
 
-function countDown() {
-    timeRemaining = timeRemaining - 1;
-    window.status = timeRemaining;
-    if (timeRemaining <= 0) {
-         window.clearTimeout(timer);
-         timeRemaining = 0;
-         gameConcluded = true;
-    } else {
-        timer = window.setTimeout(countDown(), 1000);
+// reduce time remaining and update header
+function reduceTime(){
+    if (timeRemaining > 0) {
+        timeRemaining = timeRemaining - 1;
         document.getElementById('time-remaining-value').innerText = timeRemaining;
+        console.log("time reduced by 1 second")
+    } else {
+        clearInterval(timer);
+        document.getElementById('time-remaining-value').innerText = 0;
+        gameConcluded = true;
+//         displayResults()
     }
 }
-
-// end example
-
-
-
-
-
-
-
-
-
-// function startTimer () {
-
-//     while (timeRemaining <= 0) {
-//         setInterval(function() {
-
-//         })
-//     }
-// }
-
-
-
-// let timer = setInterval(function() {
-//     if (timeRemaining <= 0) {
-//         // stop timer when get to zero
-//         clearInterval(timer);
-//         // stop game
-//         gameActive = false;
-//         gameConcluded = true;
-//         // push results
-//         // ...................
-//     }
-//     document.getElementById('time-remaining-value').value = 60 - timeRemaining;
-//     timeRemaining -= 1;
-// }, 1000);
-
-
-
-    // let gameDifficulty = 1;
-    // const gameActive = false;
-    // const gameConcluded = false;
-    // const timeRemaining = 60;
-
-// let timeRemaining = 60;
-
-// let countdownTimer = setInterval(function() {
-//     if(timeRemaining <= 0) {
-//         clearInterval(countdownTimer);
-//     }
-//     document.getElementById('time-remaining-bar').value = 60 - timeRemaining;
-//     timeRemaining -= 1;
-// }, 1000);
-
-
 
 
 
 // gopher hit
-
 function gopherHit (){
     // increase player points
     playerScore = playerScore + 1
-
-    // hould find an audio file to add also...
-    // ..........
-
+    // stop prior punch and play new punch sound
+    punch.pause();
+    punch.currentTime = 0;
+    punch.play();
+    punch.volume = .6;
     // update scoreboard
     document.getElementById('player-score').innerText = playerScore; 
 }
-
-
-
-
-
-
 
 
 // golfer hit
-
 function golferHit (){
     // point penalty
     playerScore = playerScore - 10
-
     // sound for golfer hit
     nanaShort.play();
     nanaShort.volume = 1;
-
     // update scoreboard
     document.getElementById('player-score').innerText = playerScore; 
 }
@@ -560,51 +496,42 @@ function golferHit (){
 
 
 
+const gophersEl = document.querySelectorAll('.gopher');
+
+const playerNameEl = document.getElementById('player-name-scoreboard');
 
 
 
 
-// example
+// difficulty settings
 
-// const holes = document.querySelectorAll(".hole");
-//   const length = holes.length;
+let difficultySettings = [
+    {timeBetweenMin: '2000', timeBetweenMax: '4000', timeUpMin: "1000", timeUpMax: "2000"},
+    {timeBetweenMin: '1500', timeBetweenMax: '3000', timeUpMin: "750", timeUpMax: "1500"},
+    {timeBetweenMin: '1000', timeBetweenMax: '2000', timeUpMin: "500", timeUpMax: "1000"},
+    {timeBetweenMin: '500', timeBetweenMax: '1000', timeUpMin: "250", timeUpMax: "500"},
+    {timeBetweenMin: '250', timeBetweenMax: '500', timeUpMin: "125", timeUpMax: "250"},
+ ]
 
-//   var interval = setInterval(() => {
-//     //Generate a random number
-//     const random = Math.floor(Math.random() * length);
-    
-//     //Remove the active class from every ground
-//     holes.forEach((e) => {
-//       e.classList.remove("active");
-//     });
-    
-//     //Add the active class to random ground
-//     holes[random].classList.add("active");
-//   }, 700);
+// difficultySettings[gameDifficulty].timeBetweenMin
+// difficultySettings[gameDifficulty].timeBetweenMax
 
-// ^ example
+// difficultySettings[gameDifficulty].timeUpMin
+// difficultySettings[gameDifficulty].timeUpMax
 
 
+// randomly generate a hole
+const holes = document.querySelectorAll('.hole');
 
+function randomHole () {
+    const i = Math.floor(Math.random() * holes.length);
+    const hole = holes[i];
+    console.log(i)
+}
 
+// 
 
-
-
-
-
-
-
-
-
-// const carlSpacklerPoints = {}
-
-// const gopherPoints = {}
-
-
-
-// function whackGopher () {}
-
-// function whackGolfer () {}
+ 
 
 
 
@@ -612,11 +539,27 @@ function golferHit (){
 
 
 
+// randomly generate time up based on difficulty settings
+function timeUp () {
+    let minUp = difficultySettings[gameDifficulty].timeBetweenMin
+    let maxUp = difficultySettings[gameDifficulty].timeBetweenMax
+
+    return Math.round(Math.random() * (maxUp - minUp) + minUp);
+}
+
+isDisplayed = false;
+
+// display gopher
+function gopherDisplay() {
+    const timeDisplayed = timeUp()
+    const hole = randomHole()
+    hole.classlist.add('displayed');
+    // if() {
+
+    // }
 
 
 
-
-
-
+}
 
 

@@ -1,3 +1,4 @@
+/*  ////////////////////  GENERAL & SCREEN 1 ////////////////////  */
 
 body {
     background-image: url(/imgs/golfcourse.jpeg);
@@ -8,15 +9,9 @@ body {
     height: 100%; 
 }
 
-
-
-
 span {
     text-decoration: line-through;
 }
-
-
-
 
 h1, h2, h4, h5 {
     text-align: center;
@@ -49,10 +44,6 @@ h5 {
 }
 
 
-#character-title {
-    display: none;  
-    text-align: center;
-}
 
 
 
@@ -61,133 +52,9 @@ h5 {
 
 
 
+/*  ////////////////////  SCREEN 1 ////////////////////  */
 
 
-
-
-#enter-name {
-    text-align: center;
-}
-
-
-#name-title {
-    padding-top: 30px;
-    display: none;  
-}
-
-#player-name {
-    display: none;
-}
-
-
-#begin {
-    display: none;  
-    margin-top: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-
-
-
-
-
-
-/* 
-#player-name, #enter-name-title {
-    display: none;
-    text-align: center;
-} */
-
-
-/* 
-#begin {
-    display: none;
-    padding-top: 30px;
-    font-family: 'Courgette', cursive;
-    color: red;
-    text-align: center;
-    font-size: 35px;
-    text-shadow: 1px 1px 0px yellow;
-} */
-
-
-
-
-.wrapper-character-select {
-    display: grid;
-    grid-auto-columns: 125px;
-    grid-gap: 10px;
-  }
-  
-.box {
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.a {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .b {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .c {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .d {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .e {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .f {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .g {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .h {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-
-#character-grid {
-    display: none;
-    text-align: center;
-    padding-top: 30px;
-}
-
-
-img {
-    border-radius: 20%;
-    padding: 0px
-  }
 
 #welcome-gopher-1 {
     position: absolute;
@@ -316,16 +183,183 @@ img {
 
 
 
-#screen-3 {
-    display: none; 
+
+
+
+
+
+
+
+
+/*  ////////////////////  SCREEN 2  ////////////////////  */
+
+
+#character-title {
+    display: none;  
+    text-align: center;
 }
 
-.game-screen {
-    display: none;
-    padding-top: 50px;
-    /* display: grid; */
+
+
+
+
+
+
+
+
+
+.wrapper-character-select {
+    display: grid;
+    grid-auto-columns: 125px;
     grid-gap: 10px;
+  }
+  
+.box {
+    border-radius: 5px;
+    padding: 5px;
 }
+
+.a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .c {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .d {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .e {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .f {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .g {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .h {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+
+#character-grid {
+    display: none;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+img {
+    border-radius: 20%;
+    padding: 0px
+  }
+
+
+
+
+
+
+
+
+
+
+#enter-name {
+    text-align: center;
+}
+
+#name-title {
+    padding-top: 30px;
+    display: none;  
+}
+
+#player-name {
+    display: none;
+}
+
+#begin {
+    display: none;  
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ////////////////////  SCREEN 3  ////////////////////  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#screen-3 {
+
+
+    /* display: none;  */
+
+    padding-top: 50px;
+    display: grid;
+    grid-gap: 10px;
+
+
+}
+
+
 
  #player-box {
 
@@ -348,7 +382,17 @@ img {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3; 
+
+    /* 
+        display: none; 
+        display: grid;
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;  
+        /* grid-auto-columns: 125px; 
+        grid-gap: 10px;*/
 }
+
+
 
 #gopher-box {
     grid-column-start: 3;
@@ -385,17 +429,6 @@ img {
 
 
 
-
-
-.wrapper-field-grid {
-    display: none;
-    /* display: grid; */
-
-    /* grid-auto-columns: auto;
-    grid-auto-rows: auto;  */
-    grid-auto-columns: 125px;
-    grid-gap: 10px;
-  } 
 
 
 
@@ -512,7 +545,11 @@ img {
 } 
 
 
-/* 
+ 
+
+
+
+
 
 .hole .start-button .gopher {
     position: absolute; 
@@ -523,7 +560,7 @@ img {
     background-repeat: no-repeat;
 }
 
- 
+
 
  
 
@@ -533,6 +570,8 @@ img {
     z-index: 1;
     background-position: center 100%;
 }
+
+/*
 
 .start-button {
     background-image: url(/imgs/start.png);
@@ -554,7 +593,7 @@ img {
 }
 
 
-.gopher.display .start-button.display {
+.gopher.display  {
     top: 0;
 
 } 
