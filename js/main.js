@@ -53,7 +53,7 @@ function musicWelcome() {
     // volume set lower so other audio elements will sit on top of mix
     welcome.volume = 0.25;
     // remove event listener 
-    document.removeEventListener('click', musicWelcome);
+    document.removeEventListener('click', clearScreenOne);
 }
 
 // style transition, hide, unhide elements
@@ -357,7 +357,7 @@ let playerScore = 0;
 let gopherScore = 0;
 let gameDifficulty = 0;
 let gameActive = false;
-let gameConcluded = false;
+let gameOver = false;
 let timeRemaining = 60;
 
 // let results = [];
@@ -394,6 +394,15 @@ function updateDifficulty (){
 }
 
 
+// difficulty settings
+
+let difficultySettings = [
+    {timeBetweenMin: '2000', timeBetweenMax: '4000', timeUpMin: "1000", timeUpMax: "2000"},
+    {timeBetweenMin: '1500', timeBetweenMax: '3000', timeUpMin: "750", timeUpMax: "1500"},
+    {timeBetweenMin: '1000', timeBetweenMax: '2000', timeUpMin: "500", timeUpMax: "1000"},
+    {timeBetweenMin: '500', timeBetweenMax: '1000', timeUpMin: "250", timeUpMax: "500"},
+    {timeBetweenMin: '250', timeBetweenMax: '500', timeUpMin: "125", timeUpMax: "250"},
+ ]
 
 
 
@@ -416,7 +425,7 @@ function start (){
     gopherScore = 0;
     document.getElementById('gopher-score').innerText = gopherScore; 
     // reset game (for replays)
-    gameConcluded = false;
+    gameOver = false;
 
     // stop kill gophers audio
     killGophers.pause();
@@ -435,6 +444,7 @@ function start (){
         gameActive = true;
         timeRemaining = 60;
         startTimer()
+        displayGopher()
     }, 2500);
 }
 
@@ -459,7 +469,7 @@ function reduceTime(){
     } else {
         clearInterval(timer);
         document.getElementById('time-remaining-value').innerText = 0;
-        gameConcluded = true;
+        gameOver = true;
 //         displayResults()
     }
 }
@@ -496,70 +506,59 @@ function golferHit (){
 
 
 
-const gophersEl = document.querySelectorAll('.gopher');
+const gophers = document.querySelectorAll('.gopher');
 
-const playerNameEl = document.getElementById('player-name-scoreboard');
-
-
+// const playerNameEl = document.getElementById('player-name-scoreboard');
 
 
-// difficulty settings
 
-let difficultySettings = [
-    {timeBetweenMin: '2000', timeBetweenMax: '4000', timeUpMin: "1000", timeUpMax: "2000"},
-    {timeBetweenMin: '1500', timeBetweenMax: '3000', timeUpMin: "750", timeUpMax: "1500"},
-    {timeBetweenMin: '1000', timeBetweenMax: '2000', timeUpMin: "500", timeUpMax: "1000"},
-    {timeBetweenMin: '500', timeBetweenMax: '1000', timeUpMin: "250", timeUpMax: "500"},
-    {timeBetweenMin: '250', timeBetweenMax: '500', timeUpMin: "125", timeUpMax: "250"},
- ]
-
-// difficultySettings[gameDifficulty].timeBetweenMin
-// difficultySettings[gameDifficulty].timeBetweenMax
-
-// difficultySettings[gameDifficulty].timeUpMin
-// difficultySettings[gameDifficulty].timeUpMax
 
 
 // randomly generate a hole
 const holes = document.querySelectorAll('.hole');
 
-function randomHole () {
+// to prevent duplicate hole selection
+let previousHole = null;
+
+function randomHole (holes){
     const i = Math.floor(Math.random() * holes.length);
     const hole = holes[i];
-    console.log(i)
+    if(hole === previousHole) {
+        return randomHole(holes);
+    }
+    previousHole = hole;
+    return hole;
 }
 
-// 
-
- 
-
-
-
-
-
-
-
 // randomly generate time up based on difficulty settings
-function timeUp () {
-    let minUp = difficultySettings[gameDifficulty].timeBetweenMin
-    let maxUp = difficultySettings[gameDifficulty].timeBetweenMax
-
+function timeUp (){
+    let minUp = difficultySettings[gameDifficulty].timeUpMin
+    let maxUp = difficultySettings[gameDifficulty].timeUpMax
     return Math.round(Math.random() * (maxUp - minUp) + minUp);
 }
 
-isDisplayed = false;
+// randomly generate time between based on difficulty settings
+function timeBetween (){
+    let minBetween = difficultySettings[gameDifficulty].timeBetweenMin
+    let maxBetween = difficultySettings[gameDifficulty].timeBetweenMax
+    return Math.round(Math.random() * (maxBetween - minBetween) + minBetween);
+}
 
 // display gopher
-function gopherDisplay() {
-    const timeDisplayed = timeUp()
-    const hole = randomHole()
-    hole.classlist.add('displayed');
-    // if() {
-
-    // }
-
-
-
+function displayGopher() {
+    let timeDisplayed = timeUp();
+    let hole = randomHole(holes);
+    hole.classList.add('displayed');
+    setTimeout(() => {
+        hole.classList.remove('displayed');
+            if(!gameOver) {
+                displayGopher();
+            };
+    }, timeDisplayed);
 }
+
+// event listener for gopher whacks
+gophers.forEach(gopher => gopher.addEventListener('click', gopherHit));
+
 
 

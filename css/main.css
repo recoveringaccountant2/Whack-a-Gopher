@@ -383,6 +383,14 @@ img {
     grid-row-start: 2;
     grid-row-end: 3; 
 
+    display: grid;
+
+    grid-auto-columns: 125px; 
+    grid-auto-rows: 125px;  
+        /* grid-auto-columns: 125px; 
+
+
+
     /* 
         display: none; 
         display: grid;
@@ -460,12 +468,19 @@ img {
     grid-row-end: 3;
 }
 
+
+
+/* 
+
+
 #r2c1 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
 }
+
+
 
 #r2c2 {
     grid-column-start: 3;
@@ -543,13 +558,13 @@ img {
     grid-row-start: 5;
     grid-row-end: 6;
 } 
-
+ */
 
  
 
 
 
-
+/* 
 
 .hole .start-button .gopher {
     position: absolute; 
@@ -562,7 +577,7 @@ img {
 
 
 
- 
+  */
 
 
 .hole {
@@ -583,17 +598,17 @@ img {
 */
 
 .gopher {
-    position: absolute;
-    background: url(/imgs/gopheranimated.gif) bottom center no-repeat;
+    background: url(/imgs/gopher.png) bottom center no-repeat;
+    background-size: 50%;
     transition: all 0.3s;
     top: 100%;
     width: 100%;
-    height: 100%
-    /* background-size: 50%; */
+    height: 100%;
+    position: absolute;
 }
 
 
-.gopher.display  {
+.hole.displayed .gopher {
     top: 0;
 
 } 
