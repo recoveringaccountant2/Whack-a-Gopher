@@ -275,7 +275,6 @@ function screenStyleTransitionTwoThree() {
     document.getElementById('player-box').style.display = 'grid';
     document.getElementById('gopher-picture').style.display = 'block';
     document.getElementById('gopher-box').style.display = 'grid';
-    document.getElementById('game-box').addEventListener('hover', hammerCursor);
     playerNameToScoreboard (playerName);
     document.getElementById('player-picture').src = character[characterSelected].photoUrl;
     displayStartButton()
