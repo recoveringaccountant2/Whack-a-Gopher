@@ -1,7 +1,7 @@
 /*  ////////////////////  GENERAL & SCREEN 1 ////////////////////  */
 
 body {
-    background-image: url(imgs/golfcourse.jpeg);
+    background-image: url(/Whack-a-Gopher/imgs/golfcourse.jpeg);
     background-color: rgb(130, 151, 98);
     background-repeat: no-repeat;
     background-size: cover;
@@ -426,7 +426,7 @@ img {
 }
 
 .hole.gopher-displayed .gopher {
-    background: url(imgs/gopheranimated125.gif) ; 
+    background: url(/Whack-a-Gopher/imgs/gopheranimated125.gif) ; 
     border-radius: 20%;
     background-position: center 100%;
     z-index: 1;
@@ -435,7 +435,7 @@ img {
 } 
 
 .hole.golfer-displayed .golfer {
-    background: url(imgs/carl-camo125.png) ; 
+    background: url(/Whack-a-Gopher/imgs/carl-camo125.png) ; 
     border-radius: 20%;
     background-position: center 100%;
     z-index: 1;
@@ -444,7 +444,7 @@ img {
 } 
 
 .hole.start-button-displayed .start-button {
-    background: url(imgs/start125.png) ; 
+    background: url(/Whack-a-Gopher/imgs/start125.png) ; 
     border-radius: 20%;
     background-position: center 100%;
     z-index: 1;
